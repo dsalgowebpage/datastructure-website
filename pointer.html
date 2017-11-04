@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>pointer page</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet"> 
+<style type="text/css">
+   h1 {
+      font-family: 'Lobster', cursive;
+   }
+      body{
+ background-color:  #d1dcce ; 
+ }
+   .a {
+           font-size: 25px;
+           float: right; 
+           margin-left: 1%;  
+           padding-top: 60px;
+   }
+   ul {
+         margin-right: 10%;   
+   }
+ 
+    #menu {
+     height: 100px;
+     width: 100%;
+     border: 1px solid black;
+     background-color: #2ecc71;
+    }
+    .bs-example{
+    	margin: 20px;
+    	float: left;
+    }
+    .modal-content iframe{
+        margin: 0 auto;
+        display: block;
+    }
+  .modal-body {
+   background-color: green;
+   width: 1000px;
+  }
+  iframe {
+      height: 300px;
+      width: 300px;
+      border: 1px solid black;
+      float: left;
+      margin-left: 2%;
+      margin-top: 2%;
+  }
+iframe:hover {
+    box-shadow: 10px 10px 10px black;
+    opacity: 0.7;
+}
+  img {
+     height: 200px;
+     width: 200px;
+  }
+  #slide {
+    width: 95%;
+    height: 400px;
+    margin:auto;
+    background-image: url(images/swan3.jpg);
+    border: 1px solid black;
+    border-radius: 10px;
+  
+  }
+ #devision {
+   border: 1px solid black;
+   height: 1100px;
+   width: 70%;
+    margin: auto;
+     box-shadow: -5px 10px 4px black;
+      background-color: #58d68d;
+  }
+  h1 {
+    text-align: center;
+  }
+</style>
+ 
+
+</head>
+<body>
+<br>
+<div id="menu">
+<ul>
+<a class="a">Contact</a>
+<a class="a">Course-videos</a>
+<a class="a">section-b</a>
+<a class="a">Section-a</a>
+ <a class="a">Home</a>
+ 
+ </ul>
+ 
+</div>
+<br>
+  <div id="slide">
+  <h2>some sentence goes here</h2>
+ <!--
+ <br>
+<div class="slides1" class="img1"; style=" background-image:url(images/water.jpg);height: 100%;width: 100%;background-size: contain;border-radius: 20px;margin: auto;">
+
+</div>
+<div class="slides1" class="img1"; style=" background-image:url(images/water1.jpg);height: 100%;width: 100%; background-size: contain; border-radius: 20px;margin: auto;">
+
+</div>
+<div class="slides1"  class="img1"; style=" background-image:url(float4.jpg);height: 100%;width: 100%; background-size: contain; border-radius: 20px;margin: auto; color:yellow;">
+
+</div>
+
+<br>  -->
+</div>  
+  
+  <br><br>
+                    <h1>Seminar Video's on Pointer's topic</h1>  
+  <br>
+<div id="devision">
+  <iframe id="video" src="https://www.youtube.com/embed/bsvWmbsThMY?rel=0" frameborder="0" allowfullscreen></iframe>
+  
+
+    <iframe id="video" src="https://www.youtube.com/embed/dMTJh40sVMM?rel=0" frameborder="0" allowfullscreen></iframe>
+    
+     <iframe id="video" src="https://www.youtube.com/embed/ou_pJsTSlV4?rel=0" frameborder="0" allowfullscreen></iframe>
+     
+      <iframe id="video" src="https://www.youtube.com/embed/ou_pJsTSlV4?rel=0" frameborder="0" allowfullscreen></iframe>
+      
+      <iframe id="video" src="https://www.youtube.com/embed/bmHlGkEu7Wk?rel=0" frameborder="0" allowfullscreen></iframe>
+      
+       <iframe id="video" src="https://www.youtube.com/embed/Fco-SdzWeVc?rel=0" frameborder="0" allowfullscreen></iframe>
+        
+         <iframe id="video" src="https://www.youtube.com/embed/bsvWmbsThMY?rel=0" frameborder="0" allowfullscreen></iframe>
+         
+          <iframe id="video" src="https://www.youtube.com/embed/bsvWmbsThMY?rel=0" frameborder="0" allowfullscreen></iframe>
+          
+           <iframe id="video" src="https://www.youtube.com/embed/bsvWmbsThMY?rel=0" frameborder="0" allowfullscreen></iframe>
+           
+         <iframe id="video" src="https://www.youtube.com/embed/bsvWmbsThMY?rel=0" frameborder="0" allowfullscreen></iframe>
+         
+         <iframe id="video" src="https://www.youtube.com/embed/bsvWmbsThMY?rel=0" frameborder="0" allowfullscreen></iframe>
+         
+         <iframe id="video" src="https://www.youtube.com/embed/bsvWmbsThMY?rel=0" frameborder="0" allowfullscreen></iframe> 
+</div>
+
+ 
+ <br><br>
+<script type="text/javascript">
+	
+	var indexslide=1;var indexslide2=2;var indexslide3=0;
+				f1();f2();f3();
+
+					
+	function f1(){
+		var i; 
+			var slide1=document.getElementsByClassName("slides1");
+			for(i=0;i<slide1.length;i++){
+				slide1[i].style.display="none";
+			}
+			if(indexslide==0||indexslide==1){indexslide=indexslide+2}
+			else if (indexslide==2){indexslide--;}
+	
+    if (indexslide >= slide1.length) {indexslide = 0}
+    	if(indexslide <0){insexslide=slide1.length}
+    		
+    slide1[indexslide].style.display = "block";
+    setTimeout(f1, 2500);
+		}
+
+		
+
+	</script> 
+</body>
+</html>
